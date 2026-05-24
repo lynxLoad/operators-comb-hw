@@ -50,20 +50,18 @@ public class Main {
         // Задача 4
         System.out.println("ЗАДАЧА 4");
 
-        byte deliveryDistance = 95;
-        byte dayNeed = 1;
+        byte deliveryDistance = 3;
 
         if (deliveryDistance > 100) {
             System.out.println("Доставки нет");
-        } else {
-            if (deliveryDistance >= 20) {
-                dayNeed++;
-            }
-            if (deliveryDistance >= 60) {
-                dayNeed++;
-            }
-            System.out.println("Потребуется дней: " + dayNeed);
+        } else if (deliveryDistance > 0 && deliveryDistance < 20) {
+            System.out.println("Потребуется дней: 1");
+        } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
+            System.out.println("Потребуется дней: 2");
+        } else if (deliveryDistance >= 60) {
+            System.out.println("Потребуется дней: 3");
         }
+
 
         System.out.println("-------------------------------");
 
